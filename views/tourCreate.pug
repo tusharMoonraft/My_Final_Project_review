@@ -1,0 +1,46 @@
+extends base
+block content
+    
+    .login-form
+        h2.heading-secondary.ma-bt-lg Create New Tour
+        form.form.form--tourCreate(method='post' action='/tour-create' enctype='multipart/form-data')
+            
+
+            .form__group
+                label.form__label(for='name') name:
+                input#name.form__input(type='name', placeholder='name', required name='name')
+            .form__group.ma-bt-md
+                label.form__label(for='name') images:
+                input#photo.form__input(type='file',accept='image/*',  name='images' multiple) 
+            .form__group.ma-bt-md
+                label.form__label(for='name') imageCover:
+                input#photo.form__input(type='file',accept='image/*',  name='imageCover' ) 
+                
+            .form__group.ma-bt-md
+                label.form__label(for='duration') ratingsQuantity:
+                input#ratingsQuantity.form__input(type='number', placeholder='ratingsQuantity', required name='ratingsQuantity')
+            .form__group.ma-bt-md
+                label.form__label(for='duration') ratingsAverage:
+                input#ratingsAverage.form__input(type='number', placeholder='ratingsAverage', required name='ratingsAverage')    
+            .form__group.ma-bt-md
+                label.form__label(for='duration') maxGroupSize
+                input#maxGroupSize.form__input(type='number', placeholder='maxGroupSize', required name='maxGroupSize')  
+            .form__group.ma-bt-md
+                label.form__label(for='duration') price
+                input#price.form__input(type='number', placeholder='price', required name='price')       
+            .form__group.ma-bt-md
+                label.form__label(for='duration') duration:
+                input#duration.form__input(type='number', placeholder='duraton', required name='duration') 
+            .form__group.ma-bt-md
+                label.form__label(for='duration') summary:
+                input#summary.form__input(type='text', placeholder='summary', required name='summary') 
+            .form__group.ma-bt-md
+                label.form__label(for='duration') difficulty :
+                input#difficulty.form__input(type='text', placeholder='easy/medium/difficult', required name='difficulty')     
+            .form__group.ma-bt-md
+                label.form__label(for='duration') description:
+                input#description.form__input(type='text', placeholder='description', required name='description') 
+            
+                                    
+            .form__group
+                button.btn.btn--green Create Tour

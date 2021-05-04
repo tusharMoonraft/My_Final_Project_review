@@ -1,0 +1,27 @@
+extends base
+block content
+    
+    .login-form
+        h2.heading-secondary.ma-bt-lg Give Reviews
+        form.form.form--reviewCreate(method='post' action='/create-review')
+            
+
+            .form__group
+                label.form__label(for='name') review:
+                input#name.form__input(type='text', placeholder='review', required name='review')
+
+            .form__group
+                label.form__label(for='name') rating:
+                input#rating.form__input(type='number', placeholder='rating', required name='rating')
+
+            .form__group
+                label.form__label(for='name') tourName:
+                input#rating.form__input(type='text', placeholder='rating', required name='tourname') 
+
+            .form__group
+                label.form__label(for='name') userName:
+                input#rating.form__input(type='text', placeholder='rating', required name='username')        
+            
+                                    
+            .form__group
+                button.btn Create Reviews
